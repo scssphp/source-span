@@ -1,0 +1,9 @@
+parameters:
+    level: 8
+    treatPhpDocTypesAsCertain: false
+    paths:
+        - ./src/
+
+includes:
+    - vendor/phpstan/phpstan/conf/bleedingEdge.neon
+    - vendor/phpstan/phpstan-deprecation-rules/rules.neon

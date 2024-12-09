@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<ruleset name="Scssphp" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="vendor/squizlabs/php_codesniffer/phpcs.xsd">
+    <rule ref="PSR12">
+        <!-- This sniff does not properly support functions returning never and so terminating the branch. -->
+        <exclude name="PSR2.ControlStructures.SwitchDeclaration.TerminatingComment"/>
+
+        <!-- PSR12 does not actually have a hard line length -->
+        <exclude name="Generic.Files.LineLength"/>
+    </rule>
+    <rule ref="Generic.NamingConventions.UpperCaseConstantName">
+        <exclude-pattern>*/src/Highlighter/AsciiGlyph.php</exclude-pattern>
+    </rule>
+</ruleset>
