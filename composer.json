@@ -23,9 +23,6 @@
         "league/uri": "^7.4",
         "league/uri-interfaces": "^7.4"
     },
-    "suggest": {
-        "ext-mbstring": "For best performance, mbstring should be installed as it is faster than the polyfill"
-    },
     "require-dev": {
         "phpstan/phpstan": "^2.0",
         "phpstan/phpstan-deprecation-rules": "^2.0",
