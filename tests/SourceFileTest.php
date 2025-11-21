@@ -254,4 +254,24 @@ TXT,
     {
         self::assertEquals("g boom\nzip zap zop", $this->file->getText(20));
     }
+
+    public function testGetColumnCountsUnicodeCharacters(): void
+    {
+        $file = SourceFile::fromString("foo\nbar éà\nbaz");
+
+        self::assertEquals(4, $file->getColumn(8));
+        self::assertEquals(5, $file->getColumn(10));
+        self::assertEquals(6, $file->getColumn(12));
+        self::assertEquals(0, $file->getColumn(13));
+    }
+
+    public function testGetOffsetCountsUnicodeCharactersForColumns(): void
+    {
+        $file = SourceFile::fromString("foo\nbar éà\nbaz");
+
+        self::assertEquals(8, $file->getOffset(1, 4));
+        self::assertEquals(10, $file->getOffset(1, 5));
+        self::assertEquals(12, $file->getOffset(1, 6));
+        self::assertEquals(13, $file->getOffset(2, 0));
+    }
 }
