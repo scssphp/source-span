@@ -20,8 +20,8 @@
     },
     "require": {
         "php": ">=8.1",
-        "league/uri": "^7.4",
-        "league/uri-interfaces": "^7.4"
+        "league/uri": "^7.6",
+        "league/uri-interfaces": "^7.6"
     },
     "require-dev": {
         "phpstan/phpstan": "^2.0",
